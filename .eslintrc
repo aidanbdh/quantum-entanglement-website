@@ -9,5 +9,11 @@
       "jsx": true
     }
   },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "pragma": "react"
+  },
   "extends": "eslint:recommended"
 }

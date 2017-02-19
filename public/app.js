@@ -9,9 +9,3 @@ const mapStateToProps = state => {
 }
 
 module.exports = connect(mapStateToProps)(App)
-
-//Remove linter errors
-{
-  React,
-  Populations
-}

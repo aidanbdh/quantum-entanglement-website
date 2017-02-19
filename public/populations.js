@@ -9,9 +9,3 @@ const mapDispatchToProps = dispatch => {
 }
 
 module.exports = connect(mapDispatchToProps)(populations)
-
-//Remove linter errors
-{
-  React,
-  actions
-}

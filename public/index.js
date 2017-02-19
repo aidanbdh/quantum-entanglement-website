@@ -10,10 +10,3 @@ render (
   </Provider>,
   document.getElementById('app')
 )
-
-//Remove linter errors
-{
-  React,
-  Provider,
-  App
-}

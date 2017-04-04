@@ -18,7 +18,7 @@ const init = {
 const serverPopulation = (state = init, action) => {
   switch(action.type) {
     case 'populate':
-    console.log(action)
+      console.log(action)
       return Object.assign({}, state, {
         server1: action.server1,
         server2: action.server2,

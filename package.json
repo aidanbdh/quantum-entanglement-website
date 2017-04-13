@@ -13,7 +13,8 @@
     "tdd": "mocha -w -R min",
     "coverage": "nyc --reporter=lcov npm test",
     "bundle": "browserify -t babelify public/index.js -o public/main.js",
-    "bundle:watch": "watchify -v -t babelify public/index.js -o public/main.js"
+    "bundle:watch": "watchify -v -t babelify public/index.js -o public/main.js",
+    "build": "browserify -t babelify public/index.js -o public/main.js"
   },
   "repository": {
     "type": "git",

@@ -2,6 +2,8 @@ const socket1 = require('socket.io-client').connect('https://quantum-entanglemen
 const socket2 = require('socket.io-client').connect('https://quantum-entanglement2.herokuapp.com/')
 const socket3 = require('socket.io-client').connect('https://quantum-entanglement3.herokuapp.com/')
 
+console.log('connect')
+
 const Population = dispatch => {
 
   const action = {
@@ -22,7 +24,7 @@ const Population = dispatch => {
 
   if(socket1.connection) {
     socket1.emit('count')
-    socket1.on('count', num => {
+    socket1.once('count', num => {
       action.server1.count = num
       action.server1.status = 'Online'
       dispatch(action)
@@ -31,7 +33,7 @@ const Population = dispatch => {
 
   if(socket2.connection) {
     socket2.emit('count')
-    socket2.on('count', num => {
+    socket2.once('count', num => {
       action.server2.count = num
       action.server2.status = 'Online'
       dispatch(action)
@@ -40,13 +42,12 @@ const Population = dispatch => {
 
   if(socket3.connection) {
     socket3.emit('count')
-    socket3.on('count', num => {
+    socket3.once('count', num => {
       action.server3.count = num
       action.server3.status = 'Online'
       dispatch(action)
     })
   }
-
 }
 
 module.exports = {

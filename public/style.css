@@ -1,0 +1,29 @@
+#atom {
+  display: block;
+  text-align: center;
+}
+
+.server {
+  margin: auto;
+  margin-top: 50px;
+  width: 480px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.server h2 {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.content {
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-right: 10px;
+}
+
+.content p {
+  margin-top: 8px;
+}

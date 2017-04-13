@@ -2,7 +2,7 @@
 
 const { expect } = require('chai')
 const request = require('request')
-const app = require('../server.js')
+const app = require('../server/server.js')
 
 describe('server', () => {
 
@@ -20,7 +20,7 @@ describe('server', () => {
 
     request.get('http://localhost:3001', { json: true }, (err, res, body) => {
       expect(res.statusCode).to.equal(200)
-      expect(body).to.not.equal(undefined)
+      expect(body).to.equal(undefined)
       done()
     })
 

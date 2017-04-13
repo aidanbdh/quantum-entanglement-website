@@ -12,8 +12,6 @@ describe('reducers', () => {
       Population(store.dispatch)
       expect(store.getState()).to.be.an('object')
       expect(store.getState().serverPopulation.server1.status).to.equal('Offline')
-      expect(store.getState().serverPopulation.server2.status).to.equal('Offline')
-      expect(store.getState().serverPopulation.server3.status).to.equal('Offline')
     })
 
   })
